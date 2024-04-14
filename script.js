@@ -36,4 +36,5 @@ form.addEventListener('submit', (e)=>{
 dismissBtn.addEventListener('click', ()=>{
     container.classList.remove('success');
     successMsg.classList.remove('successMsgActive');
+    form.reset();
 })
