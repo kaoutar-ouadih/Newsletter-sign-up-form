@@ -1,0 +1,172 @@
+/* CSS reset */
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --darkSlate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkSlate-Grey) ;
+    color: var(--darkSlate-Grey);
+}
+.desktopImg{
+    width: 100%;
+    height: 100%;
+    /* display: block; */
+}
+.container{
+    display: flex;
+    width:65%;
+    min-width: 650px;
+    background-color: var(--White);
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 8em 0;
+    padding: 1.5em;
+    gap: 1.9em;
+    /* display: none; */
+}
+.success{
+    display: none;
+}
+.imgSection{
+    width: 42%;
+}
+.description{
+    padding:  1.5em 1.3em;
+    width: 52%;
+}
+.description h1{
+    font-size: 2.9rem;
+    color: var(--darkSlate-Grey);
+    letter-spacing: 1px;
+}
+.description p{
+    font-size: 0.9rem;
+    margin: 1em 0;
+}
+
+ul{
+    margin: 1.5em 0;
+    font-size: 0.9rem;
+    list-style: none;
+}
+li{
+    margin-bottom: 0.9em;
+    display: flex;
+    align-items: center;
+}
+svg{
+    margin-right: 1em;
+}
+label{
+    font-size: 0.7rem;
+    font-weight: 700;
+    
+}
+span{
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: hsl(4, 100%, 67%);
+    float: right;
+}
+input{
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    margin-top: 0.5em;
+    border: 1px solid var(--Grey);
+    padding: 0.2em 1.5em;
+    cursor: pointer;
+}
+button{
+    width: 100%;
+    border: none;
+    padding: 1.2em;
+    border-radius: 8px;
+    color: var(--White);
+    margin-top: 1.5em;
+    background-color: var(--darkSlate-Grey);
+}
+button:hover{
+    background: linear-gradient(to right, #ff5476 0%, hsl(4, 100%, 67%), #ff9149);
+    cursor: pointer;
+}
+.redPlaceholder::placeholder{
+    color:hsl(4, 100%, 67%);
+}
+.mobileImg{
+    display: none;
+}
+.successMsg{
+    background-color: white;
+    width: 29%;
+    padding: 1em 2.3em 2.3em;
+    border-radius: 20px;
+    margin-top: 110px;
+    margin-bottom: 20px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.successMsgActive{
+    display: flex;
+}
+.successMsg svg{
+    margin: 1em 0;
+}
+.successMsg h1{
+    font-size: 2.3rem;
+}
+.successMsg p{
+    font-size: 0.75rem;
+    margin: 0.9em 0;
+    line-height: 18px;
+}
+
+@media (max-width:670px) {
+    body{
+        background-color: white;
+    }
+    .container{
+        flex-direction: column-reverse;
+        width:100%;
+        min-width: 200px;
+        margin: 0;
+        border-radius: 0; 
+        padding: 0;
+    }
+    .imgSection{
+        width: 100%;
+    }
+    .description{
+        width: 100%;
+    }
+    .mobileImg{
+        display: block;
+        width: 100%;
+    }
+    .desktopImg{
+        display: none;
+    }
+    .successMsg{
+        width: 100%;
+        max-width: 500px;
+        height: 90vh;
+        justify-content: space-between;
+        margin-top: 4.3em;
+    }
+}
